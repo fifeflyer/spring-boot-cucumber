@@ -1,4 +1,4 @@
-package com.example.springbootcucumber.feature.steps;
+package feature.steps;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;

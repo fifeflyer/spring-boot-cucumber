@@ -1,6 +1,6 @@
-package com.example.springbootcucumber.feature.context;
+package feature.context;
 
-import com.example.springbootcucumber.feature.annotation.SpringScenarioScope;
+import feature.annotation.SpringScenarioScope;
 import lombok.Data;
 
 @Data

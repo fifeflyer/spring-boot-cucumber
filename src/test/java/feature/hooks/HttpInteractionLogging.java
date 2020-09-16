@@ -1,9 +1,9 @@
-package com.example.springbootcucumber.feature.steps.hooks;
+package feature.hooks;
 
 import static java.util.Objects.nonNull;
 import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
 
-import com.example.springbootcucumber.feature.context.HttpContext;
+import feature.context.HttpContext;
 import io.cucumber.java8.En;
 
 public class HttpInteractionLogging implements En {

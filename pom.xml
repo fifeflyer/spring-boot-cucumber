@@ -133,7 +133,7 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <configuration>
                     <useSystemClassLoader>true</useSystemClassLoader>
-                    <parallel>classes</parallel>
+                    <parallel>classesAndMethods</parallel>
                     <threadCount>4</threadCount>
                 </configuration>
             </plugin>

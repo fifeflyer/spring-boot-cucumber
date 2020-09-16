@@ -1,13 +1,13 @@
-package com.example.springbootcucumber.feature.filter;
+package feature.filter;
 
 import static java.lang.System.lineSeparator;
 import static java.util.Objects.isNull;
 
 import org.apache.commons.lang3.StringUtils;
-import com.example.springbootcucumber.feature.annotation.SpringScenarioScope;
-import com.example.springbootcucumber.feature.context.HttpContext;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import feature.annotation.SpringScenarioScope;
+import feature.context.HttpContext;
 import io.restassured.filter.Filter;
 import io.restassured.filter.FilterContext;
 import io.restassured.filter.log.RequestLoggingFilter;
