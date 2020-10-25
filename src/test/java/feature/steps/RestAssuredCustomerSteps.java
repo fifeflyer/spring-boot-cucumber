@@ -1,14 +1,14 @@
 package feature.steps;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
 import io.cucumber.java8.En;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 @Slf4j
 public class RestAssuredCustomerSteps implements En {
@@ -38,7 +38,7 @@ public class RestAssuredCustomerSteps implements En {
                 assertThat(response.jsonPath().getList("$").size(), equalTo(length)));
 
         Then("the customer should have a name of {string}", (name) ->
-                assertThat(response.jsonPath().get("customerName"), equalTo(name)));
+                assertThat(response.jsonPath().get("name"), equalTo(name)));
     }
 }
 
