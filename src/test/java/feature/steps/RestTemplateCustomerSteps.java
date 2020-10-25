@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.hasSize;
 
 public class RestTemplateCustomerSteps implements En {
 
-    private static final String ENDPOINT = "http://localhost:10090/api/v1/customers";
+    private static final String ENDPOINT = "http://localhost:10090/cuke/api/v1/customers";
 
     private static final ParameterizedTypeReference<List<CustomerDTO>> CUSTOMERS = new ParameterizedTypeReference<>() {};
 
