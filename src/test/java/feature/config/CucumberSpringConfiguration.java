@@ -28,7 +28,7 @@ public class CucumberSpringConfiguration {
         log.info("----- Executing Cucumber Test [{}] -----", scenario.getName());
 
         RestAssured.filters(httpLoggingFilter);
-        RestAssured.baseURI = "http://localhost:10090/cuke";
+        RestAssured.baseURI = "http://localhost:10090";
     }
 
     @TestConfiguration

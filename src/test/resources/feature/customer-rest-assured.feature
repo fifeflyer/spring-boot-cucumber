@@ -5,7 +5,7 @@ Feature: Customer scenarios using RestAssured
     Given the customer endpoint exists
     When a valid request is sent to retrieve all customers
     Then the response status code should be 200
-    And the response should have a length of 3
+    And the response should have a length of 8
 
   Scenario: Get customer with RestAssured
     Given the customer endpoint exists

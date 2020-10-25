@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.hasSize;
 
 public class RestTemplateCustomerSteps implements En {
 
-    private static final String ENDPOINT = "http://localhost:10090/cuke/api/v1/customers";
+    private static final String ENDPOINT = "http://localhost:10090/api/v1/customers";
 
     private static final ParameterizedTypeReference<List<CustomerDTO>> CUSTOMERS = new ParameterizedTypeReference<>() {};
 
@@ -26,6 +26,6 @@ public class RestTemplateCustomerSteps implements En {
         Given("^a request to retrieve all customers is executed$", () ->
             customers = restTemplate.exchange(ENDPOINT, HttpMethod.GET, null, CUSTOMERS).getBody());
 
-        Then("all available customers are returned", () -> assertThat(customers, hasSize(3)));
+        Then("all available customers are returned", () -> assertThat(customers, hasSize(8)));
     }
 }
