@@ -14,17 +14,22 @@ public class CustomerService {
 
     private final CustomerRepository customerRepository;
     private final CustomerMapper customerMapper;
+    private final LoggingService loggingService;
 
-    public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper) {
+    public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper, LoggingService loggingService) {
         this.customerRepository = customerRepository;
         this.customerMapper = customerMapper;
+        this.loggingService = loggingService;
     }
 
     public List<CustomerDTO> findAll() {
+        loggingService.log();
         return customerMapper.toDTO(customerRepository.findAll());
     }
 
     public CustomerDTO findById(UUID id) {
+        loggingService.log();
+
         CustomerEntity customerEntity = customerRepository.findById(id)
                 .orElseThrow(() -> new CustomerNotFoundException(id));
 

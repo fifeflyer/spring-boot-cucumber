@@ -31,6 +31,9 @@ class CustomerServiceTest {
     private CustomerRepository customerRepository;
 
     @Mock
+    private LoggingService loggingService;
+
+    @Mock
     private CustomerMapper customerMapper;
 
     @InjectMocks
@@ -42,6 +45,7 @@ class CustomerServiceTest {
 
         verify(customerRepository, times(1)).findAll();
         verify(customerMapper, times(1)).toDTO(anyList());
+        verify(loggingService, times(1)).log();
     }
 
     @Test
@@ -52,6 +56,7 @@ class CustomerServiceTest {
 
         verify(customerRepository, times(1)).findById(any());
         verify(customerMapper, times(1)).toDTO(any(CustomerEntity.class));
+        verify(loggingService, times(1)).log();
     }
 
     @Test
