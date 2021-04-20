@@ -1,11 +1,12 @@
 package com.example.springbootcucumber.entity;
 
-import java.util.UUID;
+import lombok.Data;
+import org.hibernate.annotations.Type;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import org.hibernate.annotations.Type;
-import lombok.Data;
+import java.util.UUID;
 
 @Entity
 @Table(name = "customer")
@@ -16,5 +17,5 @@ public class CustomerEntity {
     @Type(type = "uuid-char")
     private UUID id;
 
-    private String customerName;
+    private String name;
 }
